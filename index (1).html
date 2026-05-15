@@ -26,15 +26,12 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: var(--font); background: var(--bg); color: var(--text); font-size: 14px; min-height: 100vh; }
 
-/* HEADER */
 .header { background: var(--text); color: #f5f4f0; padding: 0 2rem; height: 52px; display: flex; align-items: center; justify-content: space-between; }
 .header-title { font-family: var(--mono); font-size: 15px; font-weight: 500; letter-spacing: .02em; }
 .header-sync { font-size: 12px; color: #9c9990; font-family: var(--mono); }
 
-/* LAYOUT */
 .layout { display: grid; grid-template-columns: 220px 1fr; min-height: calc(100vh - 52px); }
 
-/* SIDEBAR */
 .sidebar { background: var(--surface); border-right: 1px solid var(--border); padding: 1.5rem 0; }
 .nav-section { padding: 0 1rem; margin-bottom: 1.5rem; }
 .nav-label { font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--text-faint); padding: 0 .5rem; margin-bottom: .5rem; }
@@ -43,26 +40,22 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); font
 .nav-item.active { background: var(--text); color: #f5f4f0; font-weight: 500; }
 .nav-icon { font-size: 15px; width: 18px; text-align: center; }
 
-/* MAIN */
 .main { padding: 2rem; overflow-y: auto; }
 .page { display: none; }
 .page.active { display: block; }
 .page-title { font-size: 20px; font-weight: 600; margin-bottom: 1.5rem; }
 
-/* KPI */
 .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 1.5rem; }
 .kpi { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: 14px 16px; }
 .kpi-label { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-faint); margin-bottom: 6px; }
 .kpi-value { font-family: var(--mono); font-size: 18px; font-weight: 500; }
 .kpi-sub { font-size: 11px; color: var(--text-muted); margin-top: 3px; }
 
-/* CARD */
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); margin-bottom: 1rem; }
 .card-header { padding: 14px 16px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
 .card-title { font-size: 13px; font-weight: 600; }
 .card-body { padding: 16px; }
 
-/* FORM */
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .form-group { display: flex; flex-direction: column; gap: 5px; }
 .form-group.full { grid-column: 1 / -1; }
@@ -76,7 +69,6 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--t
 textarea { resize: vertical; min-height: 60px; }
 .form-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 14px; }
 
-/* BUTTONS */
 .btn { padding: 7px 16px; font-size: 13px; font-family: var(--font); border-radius: var(--r); cursor: pointer; border: 1px solid var(--border); background: var(--surface); color: var(--text); transition: all .15s; font-weight: 500; }
 .btn:hover { background: var(--bg); }
 .btn:active { transform: scale(.98); }
@@ -86,7 +78,6 @@ textarea { resize: vertical; min-height: 60px; }
 .btn-danger { color: var(--red-text); border-color: #e8b4b4; }
 .btn-danger:hover { background: var(--red-bg); }
 
-/* TABLE */
 .table-wrap { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 13px; }
 th { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--text-faint); padding: 8px 12px; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
@@ -94,13 +85,11 @@ td { padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: 
 tr:last-child td { border-bottom: none; }
 tr:hover td { background: var(--bg); }
 
-/* BADGES */
 .badge { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px; font-weight: 600; font-family: var(--mono); text-transform: uppercase; letter-spacing: .04em; }
 .badge-pago { background: var(--green-bg); color: var(--green-text); }
 .badge-gasto { background: var(--amber-bg); color: var(--amber-text); }
 .badge-factura { background: var(--blue-bg); color: var(--blue-text); }
 
-/* PROVEEDORES */
 .prov-grid { display: grid; gap: 10px; }
 .prov-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: 14px 16px; }
 .prov-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
@@ -112,35 +101,27 @@ tr:hover td { background: var(--bg); }
 .pct-bar-bg { height: 4px; background: var(--border); border-radius: 2px; margin-top: 8px; }
 .pct-bar { height: 4px; background: var(--text); border-radius: 2px; transition: width .4s; }
 
-/* FILTERS */
 .filters { display: flex; gap: 8px; margin-bottom: 1rem; flex-wrap: wrap; }
 .filter-btn { padding: 5px 12px; font-size: 12px; border: 1px solid var(--border); border-radius: 20px; background: var(--surface); color: var(--text-muted); cursor: pointer; font-weight: 500; transition: all .15s; }
 .filter-btn.active { background: var(--text); color: #f5f4f0; border-color: var(--text); }
 
-/* TOAST */
 .toast { position: fixed; bottom: 1.5rem; right: 1.5rem; background: var(--text); color: #f5f4f0; padding: 10px 18px; border-radius: var(--r); font-size: 13px; font-weight: 500; opacity: 0; transform: translateY(8px); transition: all .25s; pointer-events: none; z-index: 999; }
 .toast.show { opacity: 1; transform: translateY(0); }
 .toast.error { background: #7a1a1a; }
 
-/* SPINNER */
 .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: spin .6s linear infinite; vertical-align: -2px; margin-right: 6px; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* LOADING OVERLAY */
 .loading { display: flex; align-items: center; justify-content: center; padding: 3rem; color: var(--text-muted); font-size: 13px; gap: 8px; }
 
-/* PROV MANAGER */
 .prov-item { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--border); }
 .prov-item:last-child { border-bottom: none; }
 .add-prov-row { display: flex; gap: 8px; margin-bottom: 10px; }
 
-/* EMPTY */
 .empty { text-align: center; padding: 2.5rem; color: var(--text-faint); font-size: 13px; }
 
-/* AMOUNT */
 .amount { font-family: var(--mono); }
 
-/* CONFIG WARNING */
 .config-warn { background: var(--amber-bg); border: 1px solid #e8c97a; border-radius: var(--r); padding: 12px 16px; font-size: 13px; color: var(--amber-text); margin-bottom: 1rem; }
 
 @media (max-width: 768px) {
@@ -153,9 +134,9 @@ tr:hover td { background: var(--bg); }
 </head>
 <body>
 
-<!-- CONFIGURA TU URL DE APPS SCRIPT AQUÍ -->
 <script>
-const GAS_URL = "TU_URL_DE_APPS_SCRIPT_AQUI";
+/** URL base de tu Web App hasta /exec (sin ?action) */
+const GAS_URL = "TU_URL_DE_APPS_SCRIPT_HASTA_EXEC";
 </script>
 
 <header class="header">
@@ -167,19 +148,19 @@ const GAS_URL = "TU_URL_DE_APPS_SCRIPT_AQUI";
   <nav class="sidebar">
     <div class="nav-section">
       <div class="nav-label">Menú</div>
-      <div class="nav-item active" onclick="navTo('registrar')">
+      <div class="nav-item active" onclick="navTo('registrar', this)">
         <span class="nav-icon">＋</span> Registrar
       </div>
-      <div class="nav-item" onclick="navTo('totales')">
+      <div class="nav-item" onclick="navTo('totales', this)">
         <span class="nav-icon">≡</span> Totales
       </div>
-      <div class="nav-item" onclick="navTo('proveedores')">
+      <div class="nav-item" onclick="navTo('proveedores', this)">
         <span class="nav-icon">◈</span> Por proveedor
       </div>
     </div>
     <div class="nav-section">
       <div class="nav-label">Config</div>
-      <div class="nav-item" onclick="navTo('config')">
+      <div class="nav-item" onclick="navTo('config', this)">
         <span class="nav-icon">⚙</span> Proveedores
       </div>
     </div>
@@ -187,11 +168,10 @@ const GAS_URL = "TU_URL_DE_APPS_SCRIPT_AQUI";
 
   <main class="main">
 
-    <!-- REGISTRAR -->
     <div class="page active" id="page-registrar">
       <div class="page-title">Nuevo registro</div>
       <div id="gas-warn" class="config-warn" style="display:none">
-        ⚠ Configura la URL de Apps Script en el archivo <code>index.html</code> (variable <code>GAS_URL</code>) para conectar con Google Sheets.
+        Configura la URL de Apps Script en <code>index.html</code> (<code>GAS_URL</code>) hasta <code>/exec</code>.
       </div>
       <div class="card">
         <div class="card-header"><span class="card-title">Captura de pago / gasto / factura</span></div>
@@ -227,14 +207,13 @@ const GAS_URL = "TU_URL_DE_APPS_SCRIPT_AQUI";
             </div>
           </div>
           <div class="form-actions">
-            <button class="btn" onclick="clearForm()">Limpiar</button>
-            <button class="btn btn-primary" id="btn-save" onclick="guardarRegistro()">Guardar registro</button>
+            <button type="button" class="btn" onclick="clearForm()">Limpiar</button>
+            <button type="button" class="btn btn-primary" id="btn-save" onclick="guardarRegistro()">Guardar registro</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- TOTALES -->
     <div class="page" id="page-totales">
       <div class="page-title">Totales</div>
       <div class="kpi-row" id="kpi-row">
@@ -247,10 +226,10 @@ const GAS_URL = "TU_URL_DE_APPS_SCRIPT_AQUI";
         <div class="card-header">
           <span class="card-title">Todos los registros</span>
           <div class="filters" id="tipo-filters" style="margin:0">
-            <button class="filter-btn active" onclick="setFilter('')">Todos</button>
-            <button class="filter-btn" onclick="setFilter('pago')">Pagos</button>
-            <button class="filter-btn" onclick="setFilter('gasto')">Gastos</button>
-            <button class="filter-btn" onclick="setFilter('factura')">Facturas</button>
+            <button type="button" class="filter-btn active" onclick="setFilter('', this)">Todos</button>
+            <button type="button" class="filter-btn" onclick="setFilter('pago', this)">Pagos</button>
+            <button type="button" class="filter-btn" onclick="setFilter('gasto', this)">Gastos</button>
+            <button type="button" class="filter-btn" onclick="setFilter('factura', this)">Facturas</button>
           </div>
         </div>
         <div class="card-body" style="padding:0">
@@ -259,13 +238,11 @@ const GAS_URL = "TU_URL_DE_APPS_SCRIPT_AQUI";
       </div>
     </div>
 
-    <!-- PROVEEDORES -->
     <div class="page" id="page-proveedores">
       <div class="page-title">Por proveedor</div>
       <div id="prov-cards"><div class="loading"><span class="spinner"></span> Cargando...</div></div>
     </div>
 
-    <!-- CONFIG -->
     <div class="page" id="page-config">
       <div class="page-title">Gestionar proveedores</div>
       <div class="card">
@@ -273,7 +250,7 @@ const GAS_URL = "TU_URL_DE_APPS_SCRIPT_AQUI";
         <div class="card-body">
           <div class="add-prov-row">
             <input type="text" id="new-prov" placeholder="Nombre del proveedor" style="flex:1">
-            <button class="btn btn-primary" onclick="agregarProveedor()">Agregar</button>
+            <button type="button" class="btn btn-primary" onclick="agregarProveedor()">Agregar</button>
           </div>
           <div id="prov-manager-list"><div class="loading"><span class="spinner"></span> Cargando...</div></div>
         </div>
@@ -286,65 +263,63 @@ const GAS_URL = "TU_URL_DE_APPS_SCRIPT_AQUI";
 <div class="toast" id="toast"></div>
 
 <script>
-// ── Estado ───────────────────────────────────────────────────
 let state = { registros: [], proveedores: [], filter: "", loading: false };
 
-// ── Init ─────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('f-fecha').value = new Date().toISOString().split('T')[0];
-  if (GAS_URL === "TU_URL_DE_APPS_SCRIPT_AQUI") {
+  if (!GAS_URL || GAS_URL.indexOf('/exec') === -1 || GAS_URL.includes('TU_URL_DE_APPS_SCRIPT')) {
     document.getElementById('gas-warn').style.display = 'block';
   }
   loadAll();
 });
 
-// ── API ──────────────────────────────────────────────────────
 async function api(params) {
-  const url = GAS_URL + "?action=" + params.action;
+  const url = GAS_URL.replace(/\/$/, '') + '?action=' + encodeURIComponent(params.action);
   const res = await fetch(url);
   return res.json();
 }
 
 async function apiPost(body) {
-  const res = await fetch(GAS_URL, {
-    method: "POST",
-    body: JSON.stringify(body)
+  const res = await fetch(GAS_URL.replace(/\/$/, ''), {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
   });
   return res.json();
 }
 
 async function loadAll() {
-  setSyncStatus("Sincronizando...", true);
+  setSyncStatus('Sincronizando...', true);
   try {
-    const data = await api({ action: "getAll" });
+    const data = await api({ action: 'getAll' });
     if (data.error) throw new Error(data.error);
-    state.registros   = data.registros   || [];
+    state.registros = data.registros || [];
     state.proveedores = data.proveedores || [];
     renderAll();
-    setSyncStatus("Sincronizado · " + fmtTime(new Date()));
+    setSyncStatus('Sincronizado · ' + fmtTime(new Date()));
   } catch (e) {
-    setSyncStatus("Error de conexión");
-    toast("Error al conectar con Sheets", true);
+    setSyncStatus('Error de conexión');
+    toast('Error al conectar con Sheets', true);
   }
 }
 
 function setSyncStatus(msg, loading = false) {
   const el = document.getElementById('sync-status');
-  el.innerHTML = loading ? `<span class="spinner" style="border-color:#9c9990;border-right-color:transparent"></span>${msg}` : msg;
+  el.innerHTML = loading
+    ? '<span class="spinner" style="border-color:#9c9990;border-right-color:transparent"></span>' + msg
+    : msg;
 }
 
-// ── Navegación ───────────────────────────────────────────────
-function navTo(page) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+function navTo(page, el) {
+  document.querySelectorAll('.page').forEach((p) => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach((n) => n.classList.remove('active'));
   document.getElementById('page-' + page).classList.add('active');
-  event.currentTarget.classList.add('active');
-  if (page === 'totales')     renderTotales();
+  if (el) el.classList.add('active');
+  if (page === 'totales') renderTotales();
   if (page === 'proveedores') renderProveedores();
-  if (page === 'config')      renderProvManager();
+  if (page === 'config') renderProvManager();
 }
 
-// ── Render ───────────────────────────────────────────────────
 function renderAll() {
   renderProvSelect();
   renderTotales();
@@ -354,163 +329,274 @@ function renderAll() {
 
 function renderProvSelect() {
   const s = document.getElementById('f-proveedor');
-  s.innerHTML = '<option value="">Seleccionar proveedor...</option>' +
-    state.proveedores.map(p => `<option value="${p}">${p}</option>`).join('');
+  s.innerHTML =
+    '<option value="">Seleccionar proveedor...</option>' +
+    state.proveedores.map((p) => '<option value="' + escapeHtml(p) + '">' + escapeHtml(p) + '</option>').join('');
+}
+
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function escapeAttr(s) {
+  return escapeHtml(s).replace(/'/g, '&#39;');
 }
 
 function renderTotales() {
-  const regs = state.filter ? state.registros.filter(r => r.tipo === state.filter) : state.registros;
-  const sum = arr => arr.reduce((a, r) => a + Number(r.monto), 0);
-  document.getElementById('k-total').textContent    = fmt(sum(state.registros));
-  document.getElementById('k-pagos').textContent    = fmt(sum(state.registros.filter(r => r.tipo === 'pago')));
-  document.getElementById('k-gastos').textContent   = fmt(sum(state.registros.filter(r => r.tipo === 'gasto')));
-  document.getElementById('k-facturas').textContent = fmt(sum(state.registros.filter(r => r.tipo === 'factura')));
+  const regs = state.filter ? state.registros.filter((r) => r.tipo === state.filter) : state.registros;
+  const sum = (arr) => arr.reduce((a, r) => a + Number(r.monto), 0);
+  document.getElementById('k-total').textContent = fmt(sum(state.registros));
+  document.getElementById('k-pagos').textContent = fmt(sum(state.registros.filter((r) => r.tipo === 'pago')));
+  document.getElementById('k-gastos').textContent = fmt(sum(state.registros.filter((r) => r.tipo === 'gasto')));
+  document.getElementById('k-facturas').textContent = fmt(sum(state.registros.filter((r) => r.tipo === 'factura')));
 
   if (!regs.length) {
     document.getElementById('tabla-total').innerHTML = '<div class="empty">Sin registros</div>';
     return;
   }
-  document.getElementById('tabla-total').innerHTML = `
-    <div class="table-wrap">
-    <table><thead><tr>
-      <th>Fecha</th><th>Proveedor</th><th>Tipo</th><th>Monto</th><th>Factura</th><th>Concepto</th><th></th>
-    </tr></thead><tbody>
-    ${regs.map(r => `<tr>
-      <td>${r.fecha}</td>
-      <td style="font-family:var(--mono);font-size:12px;">${r.proveedor}</td>
-      <td><span class="badge badge-${r.tipo}">${r.tipo}</span></td>
-      <td class="amount">${fmt(r.monto)}</td>
-      <td style="color:var(--text-muted)">${r.factura || '—'}</td>
-      <td style="color:var(--text-muted);max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${r.concepto || '—'}</td>
-      <td><button class="btn btn-sm btn-danger" onclick="eliminarRegistro('${r.id}')">✕</button></td>
-    </tr>`).join('')}
-    </tbody></table></div>`;
+  document.getElementById('tabla-total').innerHTML =
+    '<div class="table-wrap">' +
+    '<table><thead><tr>' +
+    '<th>Fecha</th><th>Proveedor</th><th>Tipo</th><th>Monto</th><th>Factura</th><th>Concepto</th><th></th>' +
+    '</tr></thead><tbody>' +
+    regs
+      .map(
+        (r) =>
+          '<tr>' +
+          '<td>' +
+          escapeHtml(r.fecha) +
+          '</td>' +
+          '<td style="font-family:var(--mono);font-size:12px;">' +
+          escapeHtml(r.proveedor) +
+          '</td>' +
+          '<td><span class="badge badge-' +
+          escapeHtml(r.tipo) +
+          '">' +
+          escapeHtml(r.tipo) +
+          '</span></td>' +
+          '<td class="amount">' +
+          fmt(r.monto) +
+          '</td>' +
+          '<td style="color:var(--text-muted)">' +
+          escapeHtml(r.factura || '—') +
+          '</td>' +
+          '<td style="color:var(--text-muted);max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' +
+          escapeHtml(r.concepto || '—') +
+          '</td>' +
+          '<td><button type="button" class="btn btn-sm btn-danger" onclick="eliminarRegistro(\'' +
+          escapeAttr(r.id) +
+          "')\">✕</button></td>" +
+          '</tr>'
+      )
+      .join('') +
+    '</tbody></table></div>';
 }
 
-function setFilter(f) {
+function setFilter(f, el) {
   state.filter = f;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  event.currentTarget.classList.add('active');
+  document.querySelectorAll('#tipo-filters .filter-btn').forEach((b) => b.classList.remove('active'));
+  if (el) el.classList.add('active');
   renderTotales();
 }
 
 function renderProveedores() {
   const el = document.getElementById('prov-cards');
-  if (!state.proveedores.length) { el.innerHTML = '<div class="empty">Sin proveedores</div>'; return; }
+  if (!state.proveedores.length) {
+    el.innerHTML = '<div class="empty">Sin proveedores</div>';
+    return;
+  }
   const totalGlobal = state.registros.reduce((a, r) => a + Number(r.monto), 0);
-  el.innerHTML = '<div class="prov-grid">' + state.proveedores.map(p => {
-    const regs = state.registros.filter(r => r.proveedor === p);
-    const total = regs.reduce((a, r) => a + Number(r.monto), 0);
-    const pct = totalGlobal ? ((total / totalGlobal) * 100).toFixed(1) : 0;
-    return `<div class="prov-card">
-      <div class="prov-card-header">
-        <div>
-          <div class="prov-card-name">${p}</div>
-          <div class="prov-card-stats" style="margin-top:3px">
-            <span>${regs.length} registros</span>
-            <span>${regs.filter(r=>r.tipo==='pago').length} pagos</span>
-            <span>${regs.filter(r=>r.tipo==='factura').length} facturas</span>
-          </div>
-          <div class="pct-bar-bg"><div class="pct-bar" style="width:${pct}%"></div></div>
-        </div>
-        <div style="text-align:right">
-          <div class="prov-card-total">${fmt(total)}</div>
-          <div style="font-size:12px;color:var(--text-muted);margin-top:2px">${pct}%</div>
-          ${regs.length ? `<button class="btn btn-sm" style="margin-top:6px;font-size:11px" onclick="toggleDetail('${p}')">desglose</button>` : ''}
-        </div>
-      </div>
-      ${regs.length ? `<div class="prov-detail" id="det-${p.replace(/\s/g,'_')}">
-        <div class="table-wrap"><table><thead><tr>
-          <th>Fecha</th><th>Tipo</th><th>Monto</th><th>Factura</th><th>Concepto</th>
-        </tr></thead><tbody>
-        ${regs.slice(0,15).map(r=>`<tr>
-          <td>${r.fecha}</td>
-          <td><span class="badge badge-${r.tipo}">${r.tipo}</span></td>
-          <td class="amount">${fmt(r.monto)}</td>
-          <td style="color:var(--text-muted)">${r.factura||'—'}</td>
-          <td style="color:var(--text-muted)">${r.concepto||'—'}</td>
-        </tr>`).join('')}
-        </tbody></table></div>
-        ${regs.length > 15 ? `<p style="font-size:11px;color:var(--text-faint);padding:8px 0">Mostrando 15 de ${regs.length}</p>` : ''}
-      </div>` : ''}
-    </div>`;
-  }).join('') + '</div>';
+  el.innerHTML =
+    '<div class="prov-grid">' +
+    state.proveedores
+      .map((p) => {
+        const regs = state.registros.filter((r) => r.proveedor === p);
+        const total = regs.reduce((a, r) => a + Number(r.monto), 0);
+        const pct = totalGlobal ? ((total / totalGlobal) * 100).toFixed(1) : 0;
+        const slug = encodeURIComponent(p).replace(/%/g, '_');
+        return (
+          '<div class="prov-card">' +
+          '<div class="prov-card-header">' +
+          '<div>' +
+          '<div class="prov-card-name">' +
+          escapeHtml(p) +
+          '</div>' +
+          '<div class="prov-card-stats" style="margin-top:3px">' +
+          '<span>' +
+          regs.length +
+          ' registros</span>' +
+          '<span>' +
+          regs.filter((r) => r.tipo === 'pago').length +
+          ' pagos</span>' +
+          '<span>' +
+          regs.filter((r) => r.tipo === 'factura').length +
+          ' facturas</span>' +
+          '</div>' +
+          '<div class="pct-bar-bg"><div class="pct-bar" style="width:' +
+          pct +
+          '%"></div></div>' +
+          '</div>' +
+          '<div style="text-align:right">' +
+          '<div class="prov-card-total">' +
+          fmt(total) +
+          '</div>' +
+          '<div style="font-size:12px;color:var(--text-muted);margin-top:2px">' +
+          pct +
+          '%</div>' +
+          (regs.length
+            ? '<button type="button" class="btn btn-sm" style="margin-top:6px;font-size:11px" onclick="toggleDetail(\'' +
+              slug +
+              '\')">desglose</button>'
+            : '') +
+          '</div>' +
+          '</div>' +
+          (regs.length
+            ? '<div class="prov-detail" id="det-' +
+              slug +
+              '">' +
+              '<div class="table-wrap"><table><thead><tr>' +
+              '<th>Fecha</th><th>Tipo</th><th>Monto</th><th>Factura</th><th>Concepto</th>' +
+              '</tr></thead><tbody>' +
+              regs
+                .slice(0, 15)
+                .map(
+                  (r) =>
+                    '<tr>' +
+                    '<td>' +
+                    escapeHtml(r.fecha) +
+                    '</td>' +
+                    '<td><span class="badge badge-' +
+                    escapeHtml(r.tipo) +
+                    '">' +
+                    escapeHtml(r.tipo) +
+                    '</span></td>' +
+                    '<td class="amount">' +
+                    fmt(r.monto) +
+                    '</td>' +
+                    '<td style="color:var(--text-muted)">' +
+                    escapeHtml(r.factura || '—') +
+                    '</td>' +
+                    '<td style="color:var(--text-muted)">' +
+                    escapeHtml(r.concepto || '—') +
+                    '</td>' +
+                    '</tr>'
+                )
+                .join('') +
+              '</tbody></table></div>' +
+              (regs.length > 15
+                ? '<p style="font-size:11px;color:var(--text-faint);padding:8px 0">Mostrando 15 de ' +
+                  regs.length +
+                  '</p>'
+                : '') +
+              '</div>'
+            : '') +
+          '</div>'
+        );
+      })
+      .join('') +
+    '</div>';
 }
 
-function toggleDetail(p) {
-  const el = document.getElementById('det-' + p.replace(/\s/g,'_'));
+function toggleDetail(slug) {
+  const el = document.getElementById('det-' + slug);
   if (el) el.classList.toggle('open');
 }
 
 function renderProvManager() {
   const el = document.getElementById('prov-manager-list');
-  if (!state.proveedores.length) { el.innerHTML = '<div class="empty">Sin proveedores</div>'; return; }
-  el.innerHTML = state.proveedores.map(p => `
-    <div class="prov-item">
-      <span style="font-family:var(--mono);font-size:13px">${p}</span>
-      <button class="btn btn-sm btn-danger" onclick="eliminarProveedor('${p}')">✕ Eliminar</button>
-    </div>`).join('');
+  if (!state.proveedores.length) {
+    el.innerHTML = '<div class="empty">Sin proveedores</div>';
+    return;
+  }
+  el.innerHTML = state.proveedores
+    .map(
+      (p) =>
+        '<div class="prov-item">' +
+        '<span style="font-family:var(--mono);font-size:13px">' +
+        escapeHtml(p) +
+        '</span>' +
+        '<button type="button" class="btn btn-sm btn-danger" onclick="eliminarProveedor(\'' +
+        escapeAttr(p) +
+        "')\">✕ Eliminar</button>" +
+        '</div>'
+    )
+    .join('');
 }
 
-// ── Acciones ─────────────────────────────────────────────────
 async function guardarRegistro() {
-  const prov     = document.getElementById('f-proveedor').value;
-  const tipo     = document.getElementById('f-tipo').value;
-  const monto    = document.getElementById('f-monto').value;
-  const fecha    = document.getElementById('f-fecha').value;
-  const factura  = document.getElementById('f-factura').value.trim();
+  const prov = document.getElementById('f-proveedor').value;
+  const tipo = document.getElementById('f-tipo').value;
+  const monto = document.getElementById('f-monto').value;
+  const fecha = document.getElementById('f-fecha').value;
+  const factura = document.getElementById('f-factura').value.trim();
   const concepto = document.getElementById('f-concepto').value.trim();
 
-  if (!prov || !monto || !fecha) { toast("Completa proveedor, monto y fecha", true); return; }
+  if (!prov || !monto || !fecha) {
+    toast('Completa proveedor, monto y fecha', true);
+    return;
+  }
 
   const btn = document.getElementById('btn-save');
   btn.disabled = true;
   btn.innerHTML = '<span class="spinner"></span>Guardando...';
 
   try {
-    const res = await apiPost({ action: "addRegistro", data: { fecha, proveedor: prov, tipo, monto, factura, concepto } });
+    const res = await apiPost({
+      action: 'addRegistro',
+      data: { fecha, proveedor: prov, tipo, monto, factura, concepto },
+    });
     if (res.error) throw new Error(res.error);
     await loadAll();
     clearForm();
-    toast("✓ Registro guardado en Sheets");
+    toast('✓ Registro guardado en Sheets');
   } catch (e) {
-    toast("Error al guardar: " + e.message, true);
+    toast('Error al guardar: ' + e.message, true);
   } finally {
     btn.disabled = false;
-    btn.textContent = "Guardar registro";
+    btn.textContent = 'Guardar registro';
   }
 }
 
 async function eliminarRegistro(id) {
   if (!confirm('¿Eliminar este registro?')) return;
   try {
-    const res = await apiPost({ action: "deleteRegistro", id });
+    const res = await apiPost({ action: 'deleteRegistro', id });
     if (res.error) throw new Error(res.error);
     await loadAll();
-    toast("Registro eliminado");
-  } catch (e) { toast("Error: " + e.message, true); }
+    toast('Registro eliminado');
+  } catch (e) {
+    toast('Error: ' + e.message, true);
+  }
 }
 
 async function agregarProveedor() {
   const nombre = document.getElementById('new-prov').value.trim().toUpperCase();
   if (!nombre) return;
   try {
-    const res = await apiPost({ action: "addProveedor", nombre });
+    const res = await apiPost({ action: 'addProveedor', nombre });
     if (res.error) throw new Error(res.error);
     document.getElementById('new-prov').value = '';
     await loadAll();
-    toast("✓ Proveedor agregado");
-  } catch (e) { toast("Error: " + e.message, true); }
+    toast('✓ Proveedor agregado');
+  } catch (e) {
+    toast('Error: ' + e.message, true);
+  }
 }
 
 async function eliminarProveedor(nombre) {
-  if (!confirm(`¿Eliminar proveedor "${nombre}"?`)) return;
+  if (!confirm('¿Eliminar proveedor "' + nombre + '"?')) return;
   try {
-    const res = await apiPost({ action: "deleteProveedor", nombre });
+    const res = await apiPost({ action: 'deleteProveedor', nombre });
     if (res.error) throw new Error(res.error);
     await loadAll();
-    toast("Proveedor eliminado");
-  } catch (e) { toast("Error: " + e.message, true); }
+    toast('Proveedor eliminado');
+  } catch (e) {
+    toast('Error: ' + e.message, true);
+  }
 }
 
 function clearForm() {
@@ -521,18 +607,21 @@ function clearForm() {
   document.getElementById('f-concepto').value = '';
 }
 
-// ── Helpers ──────────────────────────────────────────────────
 function fmt(n) {
   return new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' }).format(n);
 }
+
 function fmtTime(d) {
   return d.toLocaleTimeString('es-MX', { hour: '2-digit', minute: '2-digit' });
 }
+
 function toast(msg, error = false) {
   const el = document.getElementById('toast');
   el.textContent = msg;
   el.className = 'toast show' + (error ? ' error' : '');
-  setTimeout(() => el.className = 'toast', 3000);
+  setTimeout(() => {
+    el.className = 'toast';
+  }, 3000);
 }
 </script>
 </body>
