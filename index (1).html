@@ -135,8 +135,7 @@ tr:hover td { background: var(--bg); }
 <body>
 
 <script>
-/** URL base de tu Web App hasta /exec (sin ?action) */
-const GAS_URL = "TU_URL_DE_APPS_SCRIPT_HASTA_EXEC";
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbzalRQ1c_YuSFjqmNnpe4bHuS43ueA2zbc1tpqWJekYAVz26tHf7OQWzJzEX8SPvS8q/exec';
 </script>
 
 <header class="header">
@@ -263,7 +262,7 @@ const GAS_URL = "TU_URL_DE_APPS_SCRIPT_HASTA_EXEC";
 <div class="toast" id="toast"></div>
 
 <script>
-let state = { registros: [], proveedores: [], filter: "", loading: false };
+let state = { registros: [], proveedores: [], filter: '', loading: false };
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('f-fecha').value = new Date().toISOString().split('T')[0];
